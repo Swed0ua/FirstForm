@@ -1,0 +1,214 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(34, 34, 34);
+  color: bisque;
+  box-sizing: border-box;
+}
+
+
+
+.form__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+
+form {
+ width: 400px;
+ margin: 0 auto;
+
+}
+.form__MainTitle {
+  font-size: 46px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.form__label {
+  display: block;
+}
+
+.form__input {
+  width: 100%;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.form__item {
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.options__input {
+  display: none;
+}
+
+.options__label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.options__label::before {
+  content: "";
+  align-items: flex-start;
+  flex: 0 0 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #fff;
+}
+
+.options__label::after {
+  transition: all ease 0.3s;
+  content: "";
+  position: absolute;
+  background-color: rgb(196, 150, 90);
+  width: 10px;
+  left: 2px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.options__input:checked + .options__label::after {
+  transform: scale(1);
+}
+
+.file {
+  position: relative;
+}
+
+.form__file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file__button {
+  display: inline-block;
+  padding: 10px 30px;
+  width: fit-content;
+  cursor: pointer;
+  background-color: rgb(224, 40, 7);
+  margin-top: 10px;
+  transition: all ease 0.2s;
+}
+
+.form__file:hover + .file__button {
+  box-shadow: 0 0 5px 1px rgb(224, 40, 7);
+}
+
+#formCheckbox {
+  display: none;
+}
+
+.checkbox__label {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.checkbox__label::before {
+  content: "";
+  flex: 0 0 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.checkbox__label::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: rgb(196, 150, 90);
+    top: 2px;
+    left: 2px ;
+    position: absolute;
+    transform: scale(0);
+    transition: all ease 0.3s;
+  }
+
+  #formCheckbox:checked + .checkbox__label::after{
+      transform: scale(1);
+      
+    }
+
+.checkbox__rel {
+  color: rgb(172, 37, 37);
+}
+
+
+.form_MainBut{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(40, 170, 131);
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.form_MainBut:hover {
+    background-color: rgb(37, 155, 120);
+
+    box-shadow: 0 0 3px 1px rgb(19, 100, 76);
+}
+
+._ERROR input{
+  box-shadow: 0 0 10px 3px red;
+}
+
+.formCheckbox._ERROR + .checkbox__label::before {
+  box-shadow: 0 0 10px 3px red;
+}
+
+.button__inactive {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button__inactive.form_MainBut:hover{
+  box-shadow: 0 0 0 0 rgb(19, 100, 76);
+  background-color: rgb(40, 170, 131);
+}
+
+.file__preview {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.file__preview>img {
+  max-width: 100%;
+}
+
+
+#form::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(44, 39, 39, 0.719) url(../img/15.gif) center / 150px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#form._sending::after{
+  opacity: 1;
+  visibility: visible;
+}

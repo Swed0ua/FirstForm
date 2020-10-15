@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link styles -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Room</title>
+</head>
+<body>
+    <div class="form__wrapper">
+        <form action="#" id="form" class="form__body">
+            <div class="form__MainTitle">My first form</div>
+            <div class="form__item">
+                <label for="formName" class="form__label ">Name</label>
+                <input type="text" name="name" id="formName" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <label for="formEmail" class="form__label ">Email</label>
+                <input type="text" name="email" id="formEmail" class="form__input _req _email">
+            </div>
+            <div class="form__item">
+                <div class="form__title">Right or Left</div>
+                <div class="options">
+                    <div class="options__item">
+                        <input id="RightHanded" type="radio" name="hand" class="options__input" value="right" checked>
+                        <label for="RightHanded" class="options__label">Right</label>
+                    </div>
+                    <div class="options__item">
+                        <input id="LeftHanded" type="radio" name="hand" class="options__input" value="left">
+                        <label for="LeftHanded" class="options__label">Left</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="formMessage" class="form__label">message: </label>
+                <textarea name="message" id="formMessage" cols="15" rows="5" class="form__input"></textarea>
+            </div>
+            <div class="form__item">
+                <div class="form__item">Age</div>
+                <select name="age" id="Age">
+                    <option value="from 0 to 10">Small</option>
+                    <option value="from 10 to 18">Teenager</option>
+                    <option value="from 18 to 29">Medium</option>
+                    <option value="from 29 to 45">Old</option>
+                    <option value="from 45 +">super Old</option>
+                </select>
+            </div>
+            <div class="form__item">
+                <div class="form__title">Select photo</div>
+                    <div class="file">
+                        <input id="formImage" type="file" class="form__file" accept=".jpeg, .png, .gif">
+                        <div class="file__button">attach</div>
+                        <div class="file__preview"></div>
+                    </div>
+            </div>
+            <div class="form__item">
+            <div class="form__checkbox">
+                <input onchange="tep()" type="checkbox" id="formCheckbox" class="_req formCheckbox">
+                <label for="formCheckbox" class="checkbox__label "><span>I understand, all <a href="#" class="checkbox__rel">rule!!!</a></span></label>
+            </div>
+            </div>
+            <button type="submit" form="form" value="Submit" class="form_MainBut">Send</button>   
+        </form>
+        
+    </div>
+ 
+    <script src="scripts/scr.js"></script>
+</body>
+</html>
