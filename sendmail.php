@@ -13,7 +13,7 @@ $mail->chatSet = "UTF-8";
 $mail->setLanguage('en', "phpmailer/language/");
 $mail->isHTML(true);
 
-$mail->setFrom( $_POST['email'], 'Andrio');
+$mail->setFrom( 'shmagala2001@gmail.com', 'Andrio');
 $mail->addAddress('shmagala2k1@gmail.com', 'Andriy');
 
 $mail->Subject = 'Hello, this my first sent form!!!';
